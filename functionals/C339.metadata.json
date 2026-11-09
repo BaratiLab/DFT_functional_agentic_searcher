@@ -1,0 +1,10 @@
+{
+  "id": 339,
+  "name": "B091_shared_SS_pair_with_orbital_window",
+  "status": "ok",
+  "train_wrmsd": 3.2264795676390463,
+  "val_wrmsd": 3.4066897952785853,
+  "n_violations": 0,
+  "source": "codex/runs/iterations.sqlite::iterations[339]",
+  "harness": "codex"
+}

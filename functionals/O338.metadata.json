@@ -1,0 +1,10 @@
+{
+  "id": 338,
+  "name": "E_336_InitFromPublished",
+  "status": "ok",
+  "train_wrmsd": 3.2457207638578516,
+  "val_wrmsd": 3.3388207859472923,
+  "n_violations": 0,
+  "source": "opus/runs/iterations.sqlite::iterations[338]",
+  "harness": "opus"
+}

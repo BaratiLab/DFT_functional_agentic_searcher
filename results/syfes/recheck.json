@@ -1,0 +1,719 @@
+[
+ {
+  "form": 0,
+  "n_params": 14,
+  "search_train": 3.2701850177546663,
+  "search_validation": 3.462472189601957,
+  "train_fp64": 3.2701843742913064,
+  "validation_fp64": 3.4622663937057356,
+  "n_violations": 1,
+  "constraints": {
+   "spin_symmetry": {
+    "value": 7.466909490030394e-16,
+    "passed": true
+   },
+   "ueg_exchange": {
+    "value": 0.012139736374176091,
+    "passed": false
+   },
+   "x_scaling": {
+    "value": 3.604855960422056e-15,
+    "passed": true
+   },
+   "grid_ae18": {
+    "value": 0.00015880270042232747,
+    "passed": true
+   }
+  },
+  "expression": {
+   "f_x": "c0 + c1*w + c2*gamma_utransform*x2/(gamma_utransform*x2 + 1.0)",
+   "f_css": "c0*w + c1*w**2 + c2*gamma_utransform**6*x2**6/(gamma_utransform*x2 + 1.0)**6 + c3*gamma_utransform**6*w**4*x2**6/(gamma_utransform*x2 + 1.0)**6 + gamma_utransform*x2/(gamma_utransform*x2 + 1.0)",
+   "f_cos": "c0 + c1*w**2 + c2*w**2*x2**(1/3) + c3*w**6 + c4*w**6*x2**(1/3)"
+  },
+  "instructions": "f_x:\n  v0 = UTransform(x2; gamma_utransform)\n  enhancement_factor = c0 + enhancement_factor\n  enhancement_factor += c1 * w\n  enhancement_factor += c2 * v0\nf_css:\n  v0 = UTransform(x2; gamma_utransform)\n  enhancement_factor = enhancement_factor + v0\n  enhancement_factor += c0 * w\n  v1 = w ** 2\n  enhancement_factor += c1 * v1\n  v2 = v0 ** 6\n  enhancement_factor += c2 * v2\n  v1 = w ** 4\n  v3 = v1 * v2\n  enhancement_factor += c3 * v3\nf_cos:\n  enhancement_factor = c0 + enhancement_factor\n  v0 = w ** 2\n  enhancement_factor += c1 * v0\n  v1 = cbrt(x2)\n  v2 = v0 * v1\n  enhancement_factor += c2 * v2\n  v3 = w ** 6\n  enhancement_factor += c3 * v3\n  v2 = v3 * v1\n  enhancement_factor += c4 * v2",
+  "params": [
+   0.862139736374172,
+   0.317533683085033,
+   0.936993691972698,
+   0.003840616724010807,
+   -4.10753796482853,
+   -5.24218990333846,
+   -1.76643208454076,
+   7.5380689617542,
+   0.46914023462026644,
+   0.805124374375355,
+   7.98909430970845,
+   -1.76098915061634,
+   -7.54815900595292,
+   2.00093961824784
+  ],
+  "layout": [
+   "f_x.c0",
+   "f_x.c1",
+   "f_x.c2",
+   "f_x.gamma_utransform",
+   "f_css.c0",
+   "f_css.c1",
+   "f_css.c2",
+   "f_css.c3",
+   "f_css.gamma_utransform",
+   "f_cos.c0",
+   "f_cos.c1",
+   "f_cos.c2",
+   "f_cos.c3",
+   "f_cos.c4"
+  ]
+ },
+ {
+  "form": 174,
+  "n_params": 14,
+  "search_train": 3.4440878428791133,
+  "search_validation": 3.503865929785042,
+  "train_fp64": 3.4441101095962816,
+  "validation_fp64": 3.505664826093414,
+  "n_violations": 0,
+  "constraints": {
+   "spin_symmetry": {
+    "value": 8.433784194244789e-16,
+    "passed": true
+   },
+   "ueg_exchange": {
+    "value": 0.0031581782910534706,
+    "passed": true
+   },
+   "x_scaling": {
+    "value": 2.989800472460875e-15,
+    "passed": true
+   },
+   "grid_ae18": {
+    "value": 0.00013566550180332628,
+    "passed": true
+   }
+  },
+  "expression": {
+   "f_x": "c0 + c1*w + c2*gamma_utransform*x2/(gamma_utransform*x2 + 1.0)",
+   "f_css": "c0*w + c1*w**2 + c2*gamma_utransform**6*x2**6/(gamma_utransform*x2 + 1.0)**6 + c3*gamma_utransform**6*w**4*x2**6/(gamma_utransform*x2 + 1.0)**6 + gamma_utransform**2*x2**2/(gamma_utransform*x2 + 1.0)**2 + gamma_utransform*x2/(gamma_utransform*x2 + 1.0)",
+   "f_cos": "c0 + c1*w**2 + c2*w**2*x2**(1/3) + c3*w**6 + c4*w**6*x2**(1/3)"
+  },
+  "instructions": "f_x:\n  v0 = UTransform(x2; gamma_utransform)\n  enhancement_factor = c0 + enhancement_factor\n  enhancement_factor += c1 * w\n  enhancement_factor += c2 * v0\nf_css:\n  v0 = UTransform(x2; gamma_utransform)\n  enhancement_factor = enhancement_factor + v0\n  enhancement_factor += v0 * v0\n  enhancement_factor += c0 * w\n  v1 = w ** 2\n  enhancement_factor += c1 * v1\n  v2 = v0 ** 6\n  enhancement_factor += c2 * v2\n  v1 = w ** 4\n  v3 += v1 * v2\n  enhancement_factor += c3 * v3\nf_cos:\n  enhancement_factor = c0 - enhancement_factor\n  v0 = w ** 2\n  enhancement_factor += c1 * v0\n  v1 = cbrt(x2)\n  v2 = v0 * v1\n  enhancement_factor += c2 * v2\n  v3 = w ** 6\n  enhancement_factor += c3 * v3\n  v2 = v3 * v1\n  enhancement_factor += c4 * v2",
+  "params": [
+   0.8468418217089465,
+   0.2969605566304361,
+   0.6824960626487276,
+   0.0066665099546980855,
+   -3.8010438648632734,
+   -5.923892009004448,
+   -2.461880130363658,
+   6.32982880511857,
+   0.6827736362159084,
+   0.6251699521647275,
+   8.065070973790094,
+   -1.637004315035933,
+   -5.31494502588987,
+   1.8851821033960239
+  ],
+  "layout": [
+   "f_x.c0",
+   "f_x.c1",
+   "f_x.c2",
+   "f_x.gamma_utransform",
+   "f_css.c0",
+   "f_css.c1",
+   "f_css.c2",
+   "f_css.c3",
+   "f_css.gamma_utransform",
+   "f_cos.c0",
+   "f_cos.c1",
+   "f_cos.c2",
+   "f_cos.c3",
+   "f_cos.c4"
+  ]
+ },
+ {
+  "form": 55,
+  "n_params": 14,
+  "search_train": 3.268839586431027,
+  "search_validation": 3.547321600594818,
+  "train_fp64": 3.2690027872357574,
+  "validation_fp64": 3.5542080894168806,
+  "n_violations": 1,
+  "constraints": {
+   "spin_symmetry": {
+    "value": 8.939508291876453e-16,
+    "passed": true
+   },
+   "ueg_exchange": {
+    "value": 0.01197134160022062,
+    "passed": false
+   },
+   "x_scaling": {
+    "value": 3.526343159684701e-15,
+    "passed": true
+   },
+   "grid_ae18": {
+    "value": 0.00013015653553824513,
+    "passed": true
+   }
+  },
+  "expression": {
+   "f_x": "c0 + c1*w + c2*(-c0 + gamma_utransform*x2/(gamma_utransform*x2 + 1.0))",
+   "f_css": "c0*w + c1*w**2 + c2*gamma_utransform**6*x2**6/(gamma_utransform*x2 + 1.0)**6 + c3*gamma_utransform**6*w**4*x2**6/(gamma_utransform*x2 + 1.0)**6 + gamma_utransform*x2/(gamma_utransform*x2 + 1.0)",
+   "f_cos": "c0 + c1*w**2 + c2*w**2*x2**(1/3) + c3*w**6 + c4*w**6*x2**(1/3)"
+  },
+  "instructions": "f_x:\n  v0 = UTransform(x2; gamma_utransform)\n  enhancement_factor = c0 + enhancement_factor\n  enhancement_factor += c1 * w\n  v0 = v0 - c0\n  enhancement_factor += c2 * v0\nf_css:\n  v0 = UTransform(x2; gamma_utransform)\n  enhancement_factor = enhancement_factor + v0\n  enhancement_factor += c0 * w\n  v1 = w ** 2\n  enhancement_factor += c1 * v1\n  v2 = v0 ** 6\n  enhancement_factor += c2 * v2\n  v1 = w ** 4\n  v3 = v1 * v2\n  enhancement_factor += c3 * v3\nf_cos:\n  enhancement_factor = c0 + enhancement_factor\n  v0 = w ** 2\n  enhancement_factor += c1 * v0\n  v1 = cbrt(x2)\n  v2 = v0 * v1\n  enhancement_factor += c2 * v2\n  v3 = w ** 6\n  enhancement_factor += c3 * v3\n  v2 = v3 * v1\n  enhancement_factor += c4 * v2",
+  "params": [
+   4.667229715081772,
+   0.34683135866750153,
+   0.8153141383174636,
+   0.004611654353117203,
+   -4.387665665350228,
+   -4.333096556182447,
+   -1.9236349786814502,
+   5.25524650350569,
+   0.4384454207269374,
+   0.8245974926490742,
+   6.281566210148571,
+   -1.4329357866640593,
+   -5.1530493261808825,
+   1.6340900055710046
+  ],
+  "layout": [
+   "f_x.c0",
+   "f_x.c1",
+   "f_x.c2",
+   "f_x.gamma_utransform",
+   "f_css.c0",
+   "f_css.c1",
+   "f_css.c2",
+   "f_css.c3",
+   "f_css.gamma_utransform",
+   "f_cos.c0",
+   "f_cos.c1",
+   "f_cos.c2",
+   "f_cos.c3",
+   "f_cos.c4"
+  ]
+ },
+ {
+  "form": 699,
+  "n_params": 14,
+  "search_train": 3.2072193495334407,
+  "search_validation": 3.5548184758084718,
+  "train_fp64": 3.2072218866829316,
+  "validation_fp64": 3.555413139520734,
+  "n_violations": 1,
+  "constraints": {
+   "spin_symmetry": {
+    "value": 8.939508291876453e-16,
+    "passed": true
+   },
+   "ueg_exchange": {
+    "value": 0.013130112400165816,
+    "passed": false
+   },
+   "x_scaling": {
+    "value": 3.8563763156341255e-15,
+    "passed": true
+   },
+   "grid_ae18": {
+    "value": 0.00014411677825067917,
+    "passed": true
+   }
+  },
+  "expression": {
+   "f_x": "c0 + c1*w - c2**6 + c2*gamma_utransform*x2/(gamma_utransform*x2 + 1.0)",
+   "f_css": "c0*w + c1*w**2 + c2*gamma_utransform**6*x2**6/(gamma_utransform*x2 + 1.0)**6 + c3*gamma_utransform**6*w**4*x2**6/(gamma_utransform*x2 + 1.0)**6 + gamma_utransform*x2/(gamma_utransform*x2 + 1.0)",
+   "f_cos": "c0 + c1*w**2 + c2*w**2*x2**(1/3) + c3*w**6 + c4*w**6*x2**(1/3)"
+  },
+  "instructions": "f_x:\n  enhancement_factor = c2 ** 6\n  v1 = v0 ** 2\n  v0 = UTransform(x2; gamma_utransform)\n  enhancement_factor = c0 - enhancement_factor\n  v1 = sqrt(x2)\n  enhancement_factor += c1 * w\n  enhancement_factor += c2 * v0\n  v1 = c1 / c1\nf_css:\n  v0 = UTransform(x2; gamma_utransform)\n  enhancement_factor = enhancement_factor + v0\n  enhancement_factor += c0 * w\n  v1 = w ** 2\n  enhancement_factor += c1 * v1\n  v2 = v0 ** 6\n  enhancement_factor += c2 * v2\n  v1 = w ** 4\n  v0 += c3 * enhancement_factor\n  v3 = v1 * v2\n  enhancement_factor += c3 * v3\nf_cos:\n  enhancement_factor = c0 + enhancement_factor\n  v0 = w ** 2\n  enhancement_factor += c1 * v0\n  v1 = cbrt(x2)\n  v2 = v0 * v1\n  enhancement_factor += c2 * v2\n  v3 = w ** 6\n  v0 = cbrt(c3)\n  enhancement_factor += c3 * v3\n  v2 = v3 * v1\n  enhancement_factor += c4 * v2",
+  "params": [
+   2.9727165223091943,
+   0.28239792098565375,
+   1.1324861163454132,
+   0.0029394281903193913,
+   -3.796217349820831,
+   -4.348654571092165,
+   -1.6676546397719592,
+   5.204153498697464,
+   0.46426022907870523,
+   0.8238972980321401,
+   6.618772663957449,
+   -1.5070066312730717,
+   -5.445027395252032,
+   1.70033951058069
+  ],
+  "layout": [
+   "f_x.c0",
+   "f_x.c1",
+   "f_x.c2",
+   "f_x.gamma_utransform",
+   "f_css.c0",
+   "f_css.c1",
+   "f_css.c2",
+   "f_css.c3",
+   "f_css.gamma_utransform",
+   "f_cos.c0",
+   "f_cos.c1",
+   "f_cos.c2",
+   "f_cos.c3",
+   "f_cos.c4"
+  ]
+ },
+ {
+  "form": 30,
+  "n_params": 14,
+  "search_train": 3.1933435236766354,
+  "search_validation": 3.5682055056986686,
+  "train_fp64": 3.1933680900518415,
+  "validation_fp64": 3.5683431021677507,
+  "n_violations": 1,
+  "constraints": {
+   "spin_symmetry": {
+    "value": 8.432880828110052e-16,
+    "passed": true
+   },
+   "ueg_exchange": {
+    "value": 0.01379721933658884,
+    "passed": false
+   },
+   "x_scaling": {
+    "value": 4.1294875038245314e-15,
+    "passed": true
+   },
+   "grid_ae18": {
+    "value": 0.0001512613211476647,
+    "passed": true
+   }
+  },
+  "expression": {
+   "f_x": "c0 + c1*w + c2**3 + c2*gamma_utransform*x2/(gamma_utransform*x2 + 1.0)",
+   "f_css": "c0*w + c1*w**2 + c2*gamma_utransform**6*x2**6/(gamma_utransform*x2 + 1.0)**6 + c3*gamma_utransform**6*w**4*x2**6/(gamma_utransform*x2 + 1.0)**6 + gamma_utransform*x2/(gamma_utransform*x2 + 1.0)",
+   "f_cos": "c0 + c1*w**2 + c2*w**2*x2**(1/3) + c3*w**6 + c4*w**6*x2**(1/3)"
+  },
+  "instructions": "f_x:\n  v0 = UTransform(x2; gamma_utransform)\n  enhancement_factor = c2 ** 3\n  enhancement_factor = c0 + enhancement_factor\n  enhancement_factor += c1 * w\n  enhancement_factor += c2 * v0\nf_css:\n  v0 = UTransform(x2; gamma_utransform)\n  enhancement_factor = enhancement_factor + v0\n  enhancement_factor += c0 * w\n  v1 = w ** 2\n  enhancement_factor += c1 * v1\n  v2 = v0 ** 6\n  enhancement_factor += c2 * v2\n  v1 = w ** 4\n  v3 = v1 * v2\n  enhancement_factor += c3 * v3\nf_cos:\n  enhancement_factor = c0 + enhancement_factor\n  v0 = w ** 2\n  enhancement_factor += c1 * v0\n  v1 = cbrt(x2)\n  v2 = v0 * v1\n  enhancement_factor += c2 * v2\n  v3 = w ** 6\n  enhancement_factor += c3 * v3\n  v2 = v3 * v1\n  enhancement_factor += c4 * v2",
+  "params": [
+   -1.6101982615410164,
+   0.2550961987857001,
+   1.352486588724755,
+   0.002325008792073646,
+   -3.561703811879951,
+   -4.338212077261314,
+   -1.5583492332844069,
+   5.257956884466422,
+   0.4805730101494857,
+   0.8270385154030657,
+   6.763720924509502,
+   -1.5375455420696398,
+   -5.644969097156565,
+   1.7250061803137036
+  ],
+  "layout": [
+   "f_x.c0",
+   "f_x.c1",
+   "f_x.c2",
+   "f_x.gamma_utransform",
+   "f_css.c0",
+   "f_css.c1",
+   "f_css.c2",
+   "f_css.c3",
+   "f_css.gamma_utransform",
+   "f_cos.c0",
+   "f_cos.c1",
+   "f_cos.c2",
+   "f_cos.c3",
+   "f_cos.c4"
+  ]
+ },
+ {
+  "form": 1244,
+  "n_params": 14,
+  "search_train": 3.1893894286072793,
+  "search_validation": 3.5687975512508867,
+  "train_fp64": 3.189576950605754,
+  "validation_fp64": 3.5654530317352235,
+  "n_violations": 1,
+  "constraints": {
+   "spin_symmetry": {
+    "value": 7.792196154452291e-16,
+    "passed": true
+   },
+   "ueg_exchange": {
+    "value": 0.013470703427193809,
+    "passed": false
+   },
+   "x_scaling": {
+    "value": 4.489159715710111e-15,
+    "passed": true
+   },
+   "grid_ae18": {
+    "value": 0.00016116011197955343,
+    "passed": true
+   }
+  },
+  "expression": {
+   "f_x": "(c0 + c1*w + c2*gamma_utransform*x2/(gamma_utransform*x2 + 1.0))**6",
+   "f_css": "c0*w + c1*w**2 + c2*gamma_utransform**6*x2**6/(gamma_utransform*x2 + 1.0)**6 + c3*gamma_utransform**6*w**4*x2**6/(gamma_utransform*x2 + 1.0)**6 + gamma_utransform*x2/(gamma_utransform*x2 + 1.0)",
+   "f_cos": "c0 + c1*w**2 + c2*w**2*x2**(1/3) + c3*w**6 + c4*w**6*x2**(1/3)"
+  },
+  "instructions": "f_x:\n  v1 = cbrt(enhancement_factor)\n  v0 = sqrt(v1)\n  v0 = UTransform(x2; gamma_utransform)\n  v1 = v1 + v0\n  enhancement_factor = c0 + enhancement_factor\n  enhancement_factor += c1 * w\n  enhancement_factor += c2 * v0\n  enhancement_factor = enhancement_factor ** 6\nf_css:\n  v0 = UTransform(x2; gamma_utransform)\n  enhancement_factor = v2 ** 2\n  enhancement_factor = enhancement_factor + v0\n  enhancement_factor += c0 * w\n  v3 = c3 ** 6\n  v2 = UTransform(enhancement_factor; gamma_utransform)\n  v1 = w ** 2\n  enhancement_factor += c1 * v1\n  v2 = v0 ** 6\n  enhancement_factor += c2 * v2\n  v1 = w ** 4\n  v3 = v1 * v2\n  enhancement_factor += c3 * v3\n  v2 = w ** 4\nf_cos:\n  v3 = c2 * c1\n  enhancement_factor = c0 + enhancement_factor\n  v0 = w ** 2\n  enhancement_factor += c1 * v0\n  v1 = cbrt(x2)\n  v2 = v0 * v1\n  enhancement_factor += c2 * v2\n  v3 = w ** 6\n  enhancement_factor += c3 * v3\n  v2 = v3 * v1\n  enhancement_factor += c4 * v2",
+  "params": [
+   0.9758309788771915,
+   0.042310246064933374,
+   0.21374576875093965,
+   0.0026295680444261005,
+   -3.3857107701614737,
+   -4.568594950567231,
+   -1.4624680982849334,
+   5.828552667125692,
+   0.512869232855703,
+   0.8330038783730419,
+   6.971673081636695,
+   -1.5532019650879292,
+   -6.108164038408036,
+   1.7219354364646051
+  ],
+  "layout": [
+   "f_x.c0",
+   "f_x.c1",
+   "f_x.c2",
+   "f_x.gamma_utransform",
+   "f_css.c0",
+   "f_css.c1",
+   "f_css.c2",
+   "f_css.c3",
+   "f_css.gamma_utransform",
+   "f_cos.c0",
+   "f_cos.c1",
+   "f_cos.c2",
+   "f_cos.c3",
+   "f_cos.c4"
+  ]
+ },
+ {
+  "form": 11,
+  "n_params": 14,
+  "search_train": 3.189003250651386,
+  "search_validation": 3.5748393351582584,
+  "train_fp64": 3.189087874180115,
+  "validation_fp64": 3.5739263260214664,
+  "n_violations": 1,
+  "constraints": {
+   "spin_symmetry": {
+    "value": 8.432880828110052e-16,
+    "passed": true
+   },
+   "ueg_exchange": {
+    "value": 0.013770423093621753,
+    "passed": false
+   },
+   "x_scaling": {
+    "value": 4.4500224445289104e-15,
+    "passed": true
+   },
+   "grid_ae18": {
+    "value": 0.00016136379313353393,
+    "passed": true
+   }
+  },
+  "expression": {
+   "f_x": "(c0 + c1*w + c2*gamma_utransform*x2/(gamma_utransform*x2 + 1.0))**3",
+   "f_css": "c0*w + c1*w**2 + c2*gamma_utransform**6*x2**6/(gamma_utransform*x2 + 1.0)**6 + c3*gamma_utransform**6*w**4*x2**6/(gamma_utransform*x2 + 1.0)**6 + gamma_utransform*x2/(gamma_utransform*x2 + 1.0)",
+   "f_cos": "c0 + c1*w**2 + c2*w**2*x2**(1/3) + c3*w**6 + c4*w**6*x2**(1/3)"
+  },
+  "instructions": "f_x:\n  v0 = UTransform(x2; gamma_utransform)\n  enhancement_factor = c0 + enhancement_factor\n  enhancement_factor += c1 * w\n  enhancement_factor += c2 * v0\n  enhancement_factor = enhancement_factor ** 3\nf_css:\n  v0 = UTransform(x2; gamma_utransform)\n  enhancement_factor = enhancement_factor + v0\n  enhancement_factor += c0 * w\n  v1 = w ** 2\n  enhancement_factor += c1 * v1\n  v2 = v0 ** 6\n  enhancement_factor += c2 * v2\n  v1 = w ** 4\n  v3 = v1 * v2\n  enhancement_factor += c3 * v3\nf_cos:\n  enhancement_factor = c0 + enhancement_factor\n  v0 = w ** 2\n  enhancement_factor += c1 * v0\n  v1 = cbrt(x2)\n  v2 = v0 * v1\n  enhancement_factor += c2 * v2\n  v3 = w ** 6\n  enhancement_factor += c3 * v3\n  v2 = v3 * v1\n  enhancement_factor += c4 * v2",
+  "params": [
+   0.952356264767593,
+   0.08242951878858928,
+   0.45138845533338334,
+   0.0024161331828982235,
+   -3.365914795136143,
+   -4.515101239415601,
+   -1.4529329979098102,
+   5.73853012375207,
+   0.5117137484894999,
+   0.833269215358449,
+   6.973514708591017,
+   -1.5603992302544145,
+   -6.086189665577821,
+   1.7317207633307028
+  ],
+  "layout": [
+   "f_x.c0",
+   "f_x.c1",
+   "f_x.c2",
+   "f_x.gamma_utransform",
+   "f_css.c0",
+   "f_css.c1",
+   "f_css.c2",
+   "f_css.c3",
+   "f_css.gamma_utransform",
+   "f_cos.c0",
+   "f_cos.c1",
+   "f_cos.c2",
+   "f_cos.c3",
+   "f_cos.c4"
+  ]
+ },
+ {
+  "form": 57,
+  "n_params": 14,
+  "search_train": 3.188745191224358,
+  "search_validation": 3.5876942360103503,
+  "train_fp64": 3.1887727020689685,
+  "validation_fp64": 3.5895474939277396,
+  "n_violations": 1,
+  "constraints": {
+   "spin_symmetry": {
+    "value": 9.600047632436917e-16,
+    "passed": true
+   },
+   "ueg_exchange": {
+    "value": 0.014307523361333785,
+    "passed": false
+   },
+   "x_scaling": {
+    "value": 4.387991318247627e-15,
+    "passed": true
+   },
+   "grid_ae18": {
+    "value": 0.00015733086370391545,
+    "passed": true
+   }
+  },
+  "expression": {
+   "f_x": "c0 + c1*w + c2*(c0*c2 + gamma_utransform*x2/(gamma_utransform*x2 + 1.0))",
+   "f_css": "c0*w + c1*w**2 + c2*gamma_utransform**6*x2**6/(gamma_utransform*x2 + 1.0)**6 + c3*gamma_utransform**6*w**4*x2**6/(gamma_utransform*x2 + 1.0)**6 + gamma_utransform*x2/(gamma_utransform*x2 + 1.0)",
+   "f_cos": "c0 + c1*w**2 + c2*w**2*x2**(1/3) + c3*w**6 + c4*w**6*x2**(1/3)"
+  },
+  "instructions": "f_x:\n  v0 = UTransform(x2; gamma_utransform)\n  enhancement_factor = c0 + enhancement_factor\n  v0 += c2 * c0\n  enhancement_factor += c1 * w\n  enhancement_factor += c2 * v0\nf_css:\n  v0 = UTransform(x2; gamma_utransform)\n  enhancement_factor = enhancement_factor + v0\n  enhancement_factor += c0 * w\n  v1 = w ** 2\n  enhancement_factor += c1 * v1\n  v2 = v0 ** 6\n  enhancement_factor += c2 * v2\n  v1 = w ** 4\n  v3 = v1 * v2\n  enhancement_factor += c3 * v3\nf_cos:\n  v3 = v2 - c1\n  enhancement_factor = c0 + enhancement_factor\n  v0 = w ** 2\n  enhancement_factor += c1 * v0\n  v1 = cbrt(x2)\n  v2 = v0 * v1\n  enhancement_factor += c2 * v2\n  v3 = w ** 6\n  enhancement_factor += c3 * v3\n  v2 = v3 * v1\n  enhancement_factor += c4 * v2",
+  "params": [
+   0.24894763102015138,
+   0.2355875881263049,
+   1.5722101450745658,
+   0.0019175408350475054,
+   -3.4015910814215857,
+   -4.329948793973745,
+   -1.4824479600071132,
+   5.3167035653725225,
+   0.4922722730273428,
+   0.8290108532903703,
+   6.8752155180557315,
+   -1.560132381103809,
+   -5.791220290626103,
+   1.741929292097639
+  ],
+  "layout": [
+   "f_x.c0",
+   "f_x.c1",
+   "f_x.c2",
+   "f_x.gamma_utransform",
+   "f_css.c0",
+   "f_css.c1",
+   "f_css.c2",
+   "f_css.c3",
+   "f_css.gamma_utransform",
+   "f_cos.c0",
+   "f_cos.c1",
+   "f_cos.c2",
+   "f_cos.c3",
+   "f_cos.c4"
+  ]
+ },
+ {
+  "form": 784,
+  "n_params": 15,
+  "search_train": 3.1882736492127783,
+  "search_validation": 3.593169014241982,
+  "train_fp64": 3.1882992966982897,
+  "validation_fp64": 3.5945242691767776,
+  "n_violations": 1,
+  "constraints": {
+   "spin_symmetry": {
+    "value": 8.060585521072075e-16,
+    "passed": true
+   },
+   "ueg_exchange": {
+    "value": 0.014490954107016618,
+    "passed": false
+   },
+   "x_scaling": {
+    "value": 4.460726013337615e-15,
+    "passed": true
+   },
+   "grid_ae18": {
+    "value": 0.0001596870636031706,
+    "passed": true
+   }
+  },
+  "expression": {
+   "f_x": "c0 + c1*w + c2*gamma_utransform*x2/(gamma_utransform*x2 + 1.0)",
+   "f_css": "c0*w + c1*w**2 + c2*gamma_utransform**6*x2**6/(gamma_utransform*x2 + 1.0)**6 + c3*gamma_utransform**6*w**4*x2**6/(gamma_utransform*x2 + 1.0)**6 + gamma_utransform*x2/(gamma_utransform*x2 + 1.0)",
+   "f_cos": "c0 + c1*c5 + c1*w**2 + c2*w**2*x2**(1/3) + c3*w**6 + c4*w**6*x2**(1/3)"
+  },
+  "instructions": "f_x:\n  v1 = cbrt(enhancement_factor)\n  v0 = UTransform(x2; gamma_utransform)\n  v1 = v1 + v0\n  enhancement_factor = c0 + enhancement_factor\n  enhancement_factor += c1 * w\n  enhancement_factor += c2 * v0\nf_css:\n  v0 = UTransform(x2; gamma_utransform)\n  enhancement_factor = v2 ** 4\n  v1 = sqrt(w)\n  enhancement_factor = enhancement_factor + v0\n  enhancement_factor += c0 * w\n  v2 = UTransform(enhancement_factor; gamma_utransform)\n  v1 = w ** 2\n  enhancement_factor += c1 * v1\n  v2 = v0 ** 6\n  enhancement_factor += c2 * v2\n  v1 = w ** 4\n  v3 = v1 * v2\n  enhancement_factor += c3 * v3\n  v2 = w ** 4\nf_cos:\n  v3 = v2 * c1\n  enhancement_factor = c0 + enhancement_factor\n  v0 = w ** 2\n  enhancement_factor += c1 * v0\n  enhancement_factor += c5 * c1\n  v1 = cbrt(x2)\n  v2 = v0 * v1\n  enhancement_factor += c2 * v2\n  v3 = w ** 6\n  enhancement_factor += c3 * v3\n  v2 = v3 * v1\n  enhancement_factor += c4 * v2",
+  "params": [
+   0.8644909541070134,
+   0.22867505463988724,
+   1.6627829895025386,
+   0.0017861929609323396,
+   -3.3403920667703346,
+   -4.320715781372661,
+   -1.4542471402733952,
+   5.350607891543259,
+   0.498591246720121,
+   -0.5490643519705998,
+   6.903824785395251,
+   -1.5674804946829148,
+   -5.84395048260815,
+   1.746509891292738,
+   0.19986737346222583
+  ],
+  "layout": [
+   "f_x.c0",
+   "f_x.c1",
+   "f_x.c2",
+   "f_x.gamma_utransform",
+   "f_css.c0",
+   "f_css.c1",
+   "f_css.c2",
+   "f_css.c3",
+   "f_css.gamma_utransform",
+   "f_cos.c0",
+   "f_cos.c1",
+   "f_cos.c2",
+   "f_cos.c3",
+   "f_cos.c4",
+   "f_cos.c5"
+  ]
+ },
+ {
+  "form": 1266,
+  "n_params": 14,
+  "search_train": 3.1882456342476178,
+  "search_validation": 3.5934131562667373,
+  "train_fp64": 3.1882884008750505,
+  "validation_fp64": 3.5943721068785206,
+  "n_violations": 1,
+  "constraints": {
+   "spin_symmetry": {
+    "value": 9.600047632436654e-16,
+    "passed": true
+   },
+   "ueg_exchange": {
+    "value": 0.014433022771576431,
+    "passed": false
+   },
+   "x_scaling": {
+    "value": 4.480003333027451e-15,
+    "passed": true
+   },
+   "grid_ae18": {
+    "value": 0.00015988477452707591,
+    "passed": true
+   }
+  },
+  "expression": {
+   "f_x": "c0*(c0 + c1*w + c2*gamma_utransform*x2/(gamma_utransform*x2 + 1.0)) + c0 + c1*w + c2*gamma_utransform*x2/(gamma_utransform*x2 + 1.0)",
+   "f_css": "c0*w + c1*w**2 + c2*gamma_utransform**6*x2**6/(gamma_utransform*x2 + 1.0)**6 + c3*gamma_utransform**6*w**4*x2**6/(gamma_utransform*x2 + 1.0)**6 + gamma_utransform*x2/(gamma_utransform*x2 + 1.0)",
+   "f_cos": "c0 + c1*w**2 + c2*w**2*x2**(1/3) + c3*w**6 + c4*w**6*x2**(1/3)"
+  },
+  "instructions": "f_x:\n  v0 = UTransform(x2; gamma_utransform)\n  enhancement_factor = c0 + enhancement_factor\n  enhancement_factor += c1 * w\n  enhancement_factor += c2 * v0\n  v1 += c1 * c1\n  enhancement_factor += enhancement_factor * c0\nf_css:\n  v0 = UTransform(x2; gamma_utransform)\n  enhancement_factor = enhancement_factor + v0\n  enhancement_factor += c0 * w\n  v1 = w ** 2\n  enhancement_factor += c1 * v1\n  v2 = v0 ** 6\n  enhancement_factor += c2 * v2\n  v1 = c2 ** 6\n  v1 = w ** 4\n  v3 = v1 * v2\n  enhancement_factor += c3 * v3\n  v2 = sqrt(enhancement_factor)\nf_cos:\n  enhancement_factor = c0 + enhancement_factor\n  v0 = w ** 2\n  v3 = c4 / c1\n  enhancement_factor += c1 * v0\n  v1 = cbrt(x2)\n  v2 = v0 * v1\n  enhancement_factor += c2 * v2\n  v3 = v2 ** 3\n  v3 = w ** 6\n  enhancement_factor += c3 * v3\n  v2 = v3 * v1\n  enhancement_factor += c4 * v2\n  v3 = w ** 6",
+  "params": [
+   0.5556670984602926,
+   0.1469717059622795,
+   1.0716256663796173,
+   0.0017830975183272813,
+   -3.3379943739167715,
+   -4.324811664595288,
+   -1.4539597774026927,
+   5.351403266563594,
+   0.498523232157981,
+   0.8309653951003355,
+   6.908939507685261,
+   -1.5689143845548728,
+   -5.846298447264669,
+   1.7479845325665053
+  ],
+  "layout": [
+   "f_x.c0",
+   "f_x.c1",
+   "f_x.c2",
+   "f_x.gamma_utransform",
+   "f_css.c0",
+   "f_css.c1",
+   "f_css.c2",
+   "f_css.c3",
+   "f_css.gamma_utransform",
+   "f_cos.c0",
+   "f_cos.c1",
+   "f_cos.c2",
+   "f_cos.c3",
+   "f_cos.c4"
+  ]
+ },
+ {
+  "form": 542,
+  "n_params": 14,
+  "search_train": 3.188249593733811,
+  "search_validation": 3.5941548697891643,
+  "train_fp64": 3.18827375611052,
+  "validation_fp64": 3.5948686377602748,
+  "n_violations": 1,
+  "constraints": {
+   "spin_symmetry": {
+    "value": 8.434695024985457e-16,
+    "passed": true
+   },
+   "ueg_exchange": {
+    "value": 0.014484258502985292,
+    "passed": false
+   },
+   "x_scaling": {
+    "value": 4.462864034632271e-15,
+    "passed": true
+   },
+   "grid_ae18": {
+    "value": 0.00016002402936330325,
+    "passed": true
+   }
+  },
+  "expression": {
+   "f_x": "sqrt(c0) + c1*w + c2*gamma_utransform*x2/(gamma_utransform*x2 + 1.0)",
+   "f_css": "c0*w + c1*w**2 + c2*gamma_utransform**6*x2**6/(gamma_utransform*x2 + 1.0)**6 + c3*gamma_utransform**6*w**4*x2**6/(gamma_utransform*x2 + 1.0)**6 + gamma_utransform*x2/(gamma_utransform*x2 + 1.0)",
+   "f_cos": "c0 + c1*w**2 + c2*w**2*x2**(1/3) + c3*w**6 + c4*w**6*x2**(1/3)"
+  },
+  "instructions": "f_x:\n  v1 = v0 ** 2\n  v0 = UTransform(x2; gamma_utransform)\n  enhancement_factor = c0 + enhancement_factor\n  v1 = sqrt(x2)\n  enhancement_factor = sqrt(c0)\n  enhancement_factor += c1 * w\n  enhancement_factor += c2 * v0\n  v1 = c1 / c1\nf_css:\n  v0 = UTransform(x2; gamma_utransform)\n  enhancement_factor = enhancement_factor + v0\n  enhancement_factor += c0 * w\n  v1 = w ** 2\n  enhancement_factor += c1 * v1\n  v2 = v0 ** 6\n  enhancement_factor += c2 * v2\n  v1 = c2 ** 6\n  v1 = w ** 4\n  v3 = v1 * v2\n  enhancement_factor += c3 * v3\nf_cos:\n  enhancement_factor = c0 + enhancement_factor\n  v0 = w ** 2\n  v3 = c4 + c1\n  enhancement_factor += c1 * v0\n  v1 = cbrt(x2)\n  v2 = v0 * v1\n  enhancement_factor += c2 * v2\n  v3 = v2 ** 3\n  v3 = w ** 6\n  enhancement_factor += c3 * v3\n  v2 = v3 * v1\n  enhancement_factor += c4 * v2",
+  "params": [
+   0.7473330331994508,
+   0.22771164396953886,
+   1.6785089794136125,
+   0.0017667034693005235,
+   -3.33205451173374,
+   -4.322538228300144,
+   -1.4503724819960089,
+   5.3511733198385,
+   0.49956208181815137,
+   0.8310916232727024,
+   6.909619117792978,
+   -1.5685544755335976,
+   -5.850702818120048,
+   1.7472592256912673
+  ],
+  "layout": [
+   "f_x.c0",
+   "f_x.c1",
+   "f_x.c2",
+   "f_x.gamma_utransform",
+   "f_css.c0",
+   "f_css.c1",
+   "f_css.c2",
+   "f_css.c3",
+   "f_css.gamma_utransform",
+   "f_cos.c0",
+   "f_cos.c1",
+   "f_cos.c2",
+   "f_cos.c3",
+   "f_cos.c4"
+  ]
+ }
+]

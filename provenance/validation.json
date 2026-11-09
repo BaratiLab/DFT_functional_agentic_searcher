@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-09",
+  "scope": "CPU assembly and saved-result verification; no new molecular campaign or paid agent search",
+  "python_syntax": "pass",
+  "frozen_functionals_cpu": {
+    "count": 29,
+    "status": "pass"
+  },
+  "mgcdb_saved_energies": {
+    "status": "pass",
+    "split_counts": {
+      "train": 870,
+      "validation": 2963,
+      "test": 1152
+    },
+    "rounded_paper_table": "matches"
+  },
+  "gscdb_saved_energies": {
+    "status": "pass",
+    "jobs": 4,
+    "molecules_per_job": 3487,
+    "sets_per_job": 36,
+    "max_per_set_ner_difference": 0.0
+  },
+  "mcp_stdio_discovery": {
+    "opus_tools": 29,
+    "codex_tools": 16,
+    "gpu_prewarm": false,
+    "status": "pass"
+  },
+  "original_copied_sources": {
+    "files": 126,
+    "hashes_unchanged": true
+  },
+  "not_performed": [
+    "fresh dependency installation",
+    "GPU molecular rerun",
+    "fresh agent search",
+    "remote GitHub publication"
+  ]
+}

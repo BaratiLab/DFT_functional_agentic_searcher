@@ -1,0 +1,10 @@
+{
+  "id": 2,
+  "name": "GAS22 (refit)",
+  "status": "ok",
+  "train_wrmsd": 3.266088266207018,
+  "val_wrmsd": 3.490145644466157,
+  "n_violations": 1,
+  "source": "opus/runs/iterations.sqlite::iterations[2]",
+  "harness": "opus"
+}

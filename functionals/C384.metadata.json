@@ -1,0 +1,10 @@
+{
+  "id": 384,
+  "name": "A093_Shared_root_SS_window_quadrature_control",
+  "status": "ok",
+  "train_wrmsd": 3.19834132823377,
+  "val_wrmsd": 3.373369585686378,
+  "n_violations": 0,
+  "source": "codex/runs/iterations.sqlite::iterations[384]",
+  "harness": "codex"
+}

@@ -1,0 +1,10 @@
+{
+  "id": 376,
+  "name": "E_365_ShellBoundary_Pub",
+  "status": "ok",
+  "train_wrmsd": 3.2302537928967885,
+  "val_wrmsd": 3.294206375203549,
+  "n_violations": 0,
+  "source": "opus/runs/iterations.sqlite::iterations[376]",
+  "harness": "opus"
+}

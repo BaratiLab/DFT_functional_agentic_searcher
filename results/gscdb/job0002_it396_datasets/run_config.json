@@ -1,0 +1,19 @@
+{
+ "candidate": "/home/ash/Documents/dft_functional_sr/candidates/00396_H_388_OSShellELF.py",
+ "params": "/home/ash/Documents/dft_fucntional_sr_gold_std/runs/job0002_it396_datasets/params.json",
+ "label": "it396",
+ "subset": "datasets",
+ "datasets": "3d4dIPSS,AE11,AE18,ALKBDE10,BDE99MR,BDE99nonMR,BH76RC,CT20,DAPD,DBH22,DIPCS9,Dip146,G21EA,HAT707MR,HAT707nonMR,HCP32,HEAVY28,He3,IP23,ISOMERIZATION20,MB08-165,NC11,O24,O24x4,OEEF,ORBH35,P34EA,Pol130,RG10N,SIE4x4,SN13,TA13,TAE_W4-17MR,TMD10,V30,WCPT6",
+ "max_nbas": 0,
+ "order": "small-first",
+ "out": "/home/ash/Documents/dft_fucntional_sr_gold_std/runs/job0002_it396_datasets",
+ "gpus": "0,1,2",
+ "ref_dir": "/media/ash/PortableSSD/dft_sr/gscdb_ref_wb97mv",
+ "no_save_ref": false,
+ "job_id": 2,
+ "retry_errors": false,
+ "nonscf_only": true,
+ "n_molecules": 3487,
+ "n_redo_refs": 0,
+ "started": "2026-10-23 09:55:32"
+}

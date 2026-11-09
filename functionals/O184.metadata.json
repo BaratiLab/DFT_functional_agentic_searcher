@@ -1,0 +1,10 @@
+{
+  "id": 184,
+  "name": "Ablation_F145_BroadWin",
+  "status": "ok",
+  "train_wrmsd": 3.2263606499175377,
+  "val_wrmsd": 3.419852770788707,
+  "n_violations": 0,
+  "source": "opus/runs/iterations.sqlite::iterations[184]",
+  "harness": "opus"
+}

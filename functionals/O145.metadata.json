@@ -1,0 +1,10 @@
+{
+  "id": 145,
+  "name": "Fusion143_noS0",
+  "status": "ok",
+  "train_wrmsd": 3.2256787466493764,
+  "val_wrmsd": 3.3329360771833674,
+  "n_violations": 0,
+  "source": "opus/runs/iterations.sqlite::iterations[145]",
+  "harness": "opus"
+}

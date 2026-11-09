@@ -1,0 +1,10 @@
+{
+  "id": 1,
+  "name": "wB97M-V (refit)",
+  "status": "ok",
+  "train_wrmsd": 3.191269672785908,
+  "val_wrmsd": 3.7891755454549245,
+  "n_violations": 0,
+  "source": "codex/runs/iterations.sqlite::iterations[1]",
+  "harness": "codex"
+}

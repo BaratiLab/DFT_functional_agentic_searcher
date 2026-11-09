@@ -1,0 +1,10 @@
+{
+  "id": 350,
+  "name": "B096_quadrature_OS_density_screen",
+  "status": "ok",
+  "train_wrmsd": 3.189785804060654,
+  "val_wrmsd": 3.3735547043331597,
+  "n_violations": 0,
+  "source": "codex/runs/iterations.sqlite::iterations[350]",
+  "harness": "codex"
+}

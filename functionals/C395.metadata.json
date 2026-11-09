@@ -1,0 +1,10 @@
+{
+  "id": 395,
+  "name": "B111_gradient_localized_SS_orbital_window",
+  "status": "ok",
+  "train_wrmsd": 3.2234298787401765,
+  "val_wrmsd": 3.389189851155564,
+  "n_violations": 0,
+  "source": "codex/runs/iterations.sqlite::iterations[395]",
+  "harness": "codex"
+}

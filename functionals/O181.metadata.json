@@ -1,0 +1,10 @@
+{
+  "id": 181,
+  "name": "Ablation_GASosFree",
+  "status": "ok",
+  "train_wrmsd": 3.297676667350754,
+  "val_wrmsd": 3.586744027275365,
+  "n_violations": 0,
+  "source": "opus/runs/iterations.sqlite::iterations[181]",
+  "harness": "opus"
+}

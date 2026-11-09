@@ -1,0 +1,10 @@
+{
+  "id": 396,
+  "name": "H_388_OSShellELF",
+  "status": "ok",
+  "train_wrmsd": 3.1399966079923685,
+  "val_wrmsd": 3.1375524619814104,
+  "n_violations": 0,
+  "source": "opus/runs/iterations.sqlite::iterations[396]",
+  "harness": "opus"
+}

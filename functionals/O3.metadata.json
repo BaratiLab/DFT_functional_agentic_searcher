@@ -1,0 +1,10 @@
+{
+  "id": 3,
+  "name": "B97M-V (refit)",
+  "status": "ok",
+  "train_wrmsd": 6.158595540389666,
+  "val_wrmsd": 6.275644558214247,
+  "n_violations": 0,
+  "source": "opus/runs/iterations.sqlite::iterations[3]",
+  "harness": "opus"
+}

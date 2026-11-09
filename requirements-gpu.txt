@@ -1,0 +1,5 @@
+-r requirements.txt
+# Original CUDA 13 wheel family. Requires a compatible NVIDIA driver.
+gpu4pyscf-cuda13x==1.8.1
+gpu4pyscf-libxc-cuda13x==0.8.1
+cupy-cuda13x==14.2.0

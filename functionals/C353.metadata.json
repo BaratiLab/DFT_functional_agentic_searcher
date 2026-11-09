@@ -1,0 +1,10 @@
+{
+  "id": 353,
+  "name": "B099_independent_SS_quadrature_odd_OS",
+  "status": "ok",
+  "train_wrmsd": 3.1858167075881467,
+  "val_wrmsd": 3.371371246637641,
+  "n_violations": 0,
+  "source": "codex/runs/iterations.sqlite::iterations[353]",
+  "harness": "codex"
+}

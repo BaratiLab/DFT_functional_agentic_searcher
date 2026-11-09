@@ -1,0 +1,10 @@
+{
+  "id": 159,
+  "name": "F145_r4",
+  "status": "ok",
+  "train_wrmsd": 3.2516901085031327,
+  "val_wrmsd": 3.3323740271719475,
+  "n_violations": 0,
+  "source": "opus/runs/iterations.sqlite::iterations[159]",
+  "harness": "opus"
+}

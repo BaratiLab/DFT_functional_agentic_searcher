@@ -1,0 +1,12 @@
+# Python 3.12; versions read from the original computation environment.
+# Install CUDA PyTorch separately as documented in README.md.
+numpy==2.5.4
+scipy==1.18.1
+h5py==3.16.0
+pandas==3.0.6
+pyscf==2.14.0
+pyscf-dispersion==1.5.0
+geometric==1.1.1
+mcp[cli]==1.30.0
+cma==4.5.0
+sympy==1.14.0

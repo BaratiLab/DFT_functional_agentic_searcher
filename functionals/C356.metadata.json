@@ -1,0 +1,10 @@
+{
+  "id": 356,
+  "name": "B101_compact_OS_endpoint_pair",
+  "status": "ok",
+  "train_wrmsd": 3.2074283161061037,
+  "val_wrmsd": 3.362805399607496,
+  "n_violations": 0,
+  "source": "codex/runs/iterations.sqlite::iterations[356]",
+  "harness": "codex"
+}

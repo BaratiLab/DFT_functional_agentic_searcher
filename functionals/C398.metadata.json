@@ -1,0 +1,10 @@
+{
+  "id": 398,
+  "name": "B114_OS_endpoint_pair_to_odd_response",
+  "status": "ok",
+  "train_wrmsd": 3.3515009148471093,
+  "val_wrmsd": 3.4239283786229566,
+  "n_violations": 0,
+  "source": "codex/runs/iterations.sqlite::iterations[398]",
+  "harness": "codex"
+}
